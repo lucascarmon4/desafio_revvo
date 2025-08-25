@@ -1,0 +1,38 @@
+@use "../base/tokens" as *;
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.2;
+    margin: 0 0 $space-4;
+    font-weight: 700;
+    color: $color-text;
+}
+
+h1 {
+    font-size: $h1-size;
+}
+h2 {
+    font-size: $h2-size;
+}
+h3 {
+    font-size: $h3-size;
+}
+h4 {
+    font-size: $h4-size;
+}
+
+p {
+    margin: 0 0 $space-4;
+    color: $color-text;
+}
+
+small,
+.muted {
+    color: $color-muted;
+}
+
+.lead {
+    font-size: 1.125rem;
+    line-height: 1.6;
+}

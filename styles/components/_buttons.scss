@@ -1,0 +1,31 @@
+@use "../base/tokens" as *;
+
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-weight: 700;
+    border: 0;
+    text-align: center;
+    transition: transform 0.06s ease, filter 0.2s ease;
+    user-select: none;
+    &:active {
+        transform: translateY(1px);
+    }
+}
+
+.btn-primary {
+    background: $color-primary;
+    color: $color-primary-contrast;
+    &:hover {
+        filter: brightness(0.95);
+    }
+}
+
+.btn-success {
+    background: $color-secondary;
+    color: #fff;
+    &:hover {
+        filter: brightness(0.95);
+    }
+}
