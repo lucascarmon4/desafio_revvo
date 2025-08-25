@@ -1,3 +1,8 @@
+<?php
+$users = $_SESSION['users'];
+$currentUser = $users[1];
+?>
+
 <header class="header">
   <div class="container header__inner">
     <a href="#" class="header__logo" aria-label="LEO">
@@ -11,10 +16,10 @@
       </div>
       <hr />
       <div class="header__user">
-        <img class="header__avatar" src="./assets/images/user.jpg" alt="Usuário John Doe">
+        <img class="header__avatar" src="./assets/images/<?php echo $currentUser['photo']; ?>" alt="Usuário <?php echo $currentUser['name']; ?>">
         <div class="header__user-info">
           <span>Seja bem-vindo</span>
-          <strong>John Doe</strong>
+          <strong><?php echo $currentUser['name']; ?></strong>
         </div>
         <img class="header__caret" src="./assets/images/caret-down.svg" alt="" aria-hidden="true">
       </div>

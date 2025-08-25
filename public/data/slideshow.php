@@ -1,2 +1,2 @@
 <?php
-return [1, 2, 3, 4];
+$_SESSION['slideshow'] = [1, 2, 3, 4];

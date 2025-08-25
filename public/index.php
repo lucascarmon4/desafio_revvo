@@ -1,5 +1,12 @@
 <?php
+$_SESSION = [];
 session_start();
+
+require __DIR__ . '/data/users.php';
+require __DIR__ . '/data/users_courses.php';
+require __DIR__ . '/data/courses.php';
+require __DIR__ . '/data/slideshow.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

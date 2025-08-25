@@ -1,8 +1,8 @@
 <?php
 // Carregar catálogo completo de cursos
-$courses   = require __DIR__ . '/../data/courses.php';
+$courses   = $_SESSION['courses'];
 // Carregar apenas os IDs do slideshow
-$sliderIds = require __DIR__ . '/../data/slideshow.php';
+$sliderIds = $_SESSION['slideshow'];
 
 // Criar índice de cursos por ID
 $byId = [];
