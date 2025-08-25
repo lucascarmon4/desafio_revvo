@@ -311,21 +311,30 @@ small,
 .hero {
   position: relative;
   width: 100%;
-  overflow: hidden;
+  height: 420px;
+  overflow: visible;
+  margin-bottom: 28px;
 }
 
 .hero__slide {
-  position: relative;
-  width: 100%;
-  height: 400px;
+  position: absolute;
+  inset: 0;
   background-size: cover;
   background-position: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.hero__slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .hero__content {
   position: absolute;
-  left: 40px;
-  bottom: 40px;
+  left: 100px;
+  bottom: 100px;
   max-width: 380px;
   background: rgba(0, 0, 0, 0.65);
   padding: 24px;
@@ -367,21 +376,19 @@ small,
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 50%;
-  width: 38px;
-  height: 38px;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: #fff;
-  font-size: 18px;
-  transition: background 0.2s ease;
+  color: white !important;
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
 }
-
-.hero__arrow:hover {
-  background: rgba(0, 0, 0, 0.65);
+.hero__arrow:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 .hero__arrow--left {
@@ -396,10 +403,15 @@ small,
 .hero__dots {
   position: absolute;
   left: 50%;
-  bottom: 10px;
+  bottom: -13px;
   transform: translateX(-50%);
   display: flex;
-  gap: 8px;
+  gap: 6px;
+  padding: 8px 12px;
+  background-color: #fff;
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  z-index: 2;
 }
 
 .hero__dot {
@@ -411,9 +423,23 @@ small,
 }
 
 .hero__dot.is-active {
-  background: #03a9f4;
+  background: rgba(0, 0, 0, 0.603);
 }
 
+@media (max-width: 768px) {
+  .hero {
+    height: 360px;
+    margin-bottom: 24px;
+  }
+  .hero__dots {
+    bottom: -18px;
+    padding: 6px 10px;
+  }
+  .hero__dot {
+    width: 10px;
+    height: 10px;
+  }
+}
 .courses {
   background: #f5f5f5;
   padding: 32px 0 64px;

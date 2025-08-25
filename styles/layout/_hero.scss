@@ -1,0 +1,130 @@
+@use "../base/tokens" as *;
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    overflow: visible;
+    margin-bottom: 28px;
+}
+
+.hero__slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+
+.hero__slide.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.hero__content {
+    position: absolute;
+    left: 100px;
+    bottom: 100px;
+    max-width: 380px;
+    background: rgba(0, 0, 0, 0.65);
+    padding: $space-5;
+    border-radius: $radius-sm;
+    color: #fff;
+}
+
+.hero__title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: $space-3;
+    color: #fff;
+}
+
+.hero__text {
+    margin-bottom: $space-4;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #eaeaea;
+}
+
+.hero__actions .btn {
+    border-radius: 25px;
+    padding: 8px 22px;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    font-weight: 600;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+.hero__actions .btn:hover {
+    background: #fff;
+    color: $color-text;
+}
+
+/* Navegação lateral */
+.hero__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white !important ;
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+.hero__arrow--left {
+    left: 10px;
+}
+.hero__arrow--right {
+    right: 10px;
+}
+
+/* Dots */
+.hero__dots {
+    position: absolute;
+    left: 50%;
+    bottom: -13px;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+    padding: 8px 12px;
+    background-color: #fff;
+    border-radius: 999px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+.hero__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #d9d9d9;
+    cursor: pointer;
+}
+.hero__dot.is-active {
+    background: rgba(0, 0, 0, 0.603);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 360px;
+        margin-bottom: 24px;
+    }
+    .hero__dots {
+        bottom: -18px;
+        padding: 6px 10px;
+    }
+    .hero__dot {
+        width: 10px;
+        height: 10px;
+    }
+}
