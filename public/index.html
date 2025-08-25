@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Desafio Revvo</title>
+        <link rel="stylesheet" href="./assets/css/main.css" />
+    </head>
+    <body>
+        <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+        <header class="header">
+            <div class="container header__inner">
+                <!-- Logo -->
+                <a href="#" class="header__logo" aria-label="LEO">
+                    <img src="./assets/images/logo-leo.png" alt="LEO" />
+                </a>
+
+                <div class="header__search-container">
+                    <!-- Busca -->
+                    <div class="header__search">
+                        <input
+                            id="search"
+                            type="search"
+                            placeholder="Pesquisar cursos..."
+                        />
+                        <img
+                            class="header__icon"
+                            src="./assets/images/search.svg"
+                            alt=""
+                            aria-hidden="true"
+                        />
+                    </div>
+                    <hr />
+                    <!-- Usuário -->
+                    <div class="header__user">
+                        <img
+                            class="header__avatar"
+                            src="./assets/images/user.jpg"
+                            alt="Usuário John Doe"
+                        />
+                        <div class="header__user-info">
+                            <span>Seja bem-vindo</span>
+                            <strong>John Doe</strong>
+                        </div>
+                        <img
+                            class="header__caret"
+                            src="./assets/images/caret-down.svg"
+                            alt=""
+                            aria-hidden="true"
+                        />
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero / Slideshow -->
+        <section class="hero">
+            <div
+                class="hero__slide"
+                style="background-image: url('./assets/images/hero-1.jpg')"
+            >
+                <div class="hero__content">
+                    <div class="hero__title">LOREM IPSUM</div>
+                    <p class="hero__text">
+                        Aenean lacinia bibendum nulla sed consectetur. Cum
+                        sociis natoque penatibus...
+                    </p>
+                    <div class="hero__actions">
+                        <a href="#" class="btn">VER CURSO</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navegação -->
+            <div
+                class="hero__arrow hero__arrow--left"
+                aria-label="Slide anterior"
+            >
+                ‹
+            </div>
+            <div
+                class="hero__arrow hero__arrow--right"
+                aria-label="Próximo slide"
+            >
+                ›
+            </div>
+
+            <!-- Dots -->
+            <div class="hero__dots">
+                <span class="hero__dot is-active"></span>
+                <span class="hero__dot"></span>
+                <span class="hero__dot"></span>
+            </div>
+        </section>
+
+        <!-- Conteúdo principal -->
+        <main id="conteudo">
+            <!-- Meus cursos -->
+            <section class="courses">
+                <div class="container">
+                    <h2 class="courses__title">MEUS CURSOS</h2>
+
+                    <div class="courses__grid">
+                        <!-- Card 1 -->
+                        <article class="card">
+                            <div class="card__media">
+                                <img
+                                    src="./assets/images/course-1.jpg"
+                                    alt="Pellentesque Malesuada"
+                                />
+                            </div>
+                            <div class="card__body">
+                                <h3 class="card__title">
+                                    PELLENTESQUE MALESUADA
+                                </h3>
+                                <p class="card__desc">
+                                    Curabitur blandit tempus porttitor. Nulla
+                                    vitae elit libero, a pharetra augue.
+                                </p>
+                            </div>
+                            <div class="card__footer">
+                                <a href="#" class="btn btn-success"
+                                    >VER CURSO</a
+                                >
+                            </div>
+                        </article>
+
+                        <!-- Card 2 -->
+                        <article class="card">
+                            <div class="card__media">
+                                <img
+                                    src="./assets/images/course-2.jpg"
+                                    alt="Fermentum Etiam"
+                                />
+                            </div>
+                            <div class="card__body">
+                                <h3 class="card__title">FERMENTUM ETIAM</h3>
+                                <p class="card__desc">
+                                    Integer posuere erat a ante venenatis
+                                    dapibus posuere velit aliquet.
+                                </p>
+                            </div>
+                            <div class="card__footer">
+                                <a href="#" class="btn btn-success"
+                                    >VER CURSO</a
+                                >
+                            </div>
+                        </article>
+
+                        <!-- Card 3 -->
+                        <article class="card">
+                            <div class="card__media">
+                                <img
+                                    src="./assets/images/course-3.jpg"
+                                    alt="Bibendum Malesuada"
+                                />
+                            </div>
+                            <div class="card__body">
+                                <h3 class="card__title">BIBENDUM MALESUADA</h3>
+                                <p class="card__desc">
+                                    Vivamus sagittis lacus vel augue laoreet
+                                    rutrum faucibus dolor auctor.
+                                </p>
+                            </div>
+                            <div class="card__footer">
+                                <a href="#" class="btn btn-success"
+                                    >VER CURSO</a
+                                >
+                            </div>
+                        </article>
+
+                        <!-- Card 4 -->
+                        <article class="card">
+                            <div class="card__media">
+                                <img
+                                    src="./assets/images/course-4.jpg"
+                                    alt="Porta Tristique"
+                                />
+                            </div>
+                            <div class="card__body">
+                                <h3 class="card__title">PORTA TRISTIQUE</h3>
+                                <p class="card__desc">
+                                    Maecenas sed diam eget risus varius blandit
+                                    sit amet non magna.
+                                </p>
+                            </div>
+                            <div class="card__footer">
+                                <a href="#" class="btn btn-success"
+                                    >VER CURSO</a
+                                >
+                            </div>
+                        </article>
+
+                        <!-- Duplicar até 8 cards no total -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container footer__inner">
+                <div>
+                    <img
+                        src="./assets/images/logo-leo.png"
+                        alt="LEO"
+                        style="height: 28px"
+                    />
+                    <small>Maecenas faucibus mollis interdum...</small>
+                </div>
+                <div>
+                    <strong>/ CONTATO</strong><br />
+                    <small>(21) 98765-3434</small>
+                    <small>contato@leolearning.com</small>
+                </div>
+                <div>
+                    <strong>/ REDES SOCIAIS</strong><br />
+                    <small>Twitter · Facebook · Pinterest</small>
+                </div>
+            </div>
+            <div class="footer__copy">
+                <div class="container">
+                    Copyright 2017 – All rights reserved.
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
