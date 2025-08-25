@@ -1,16 +1,30 @@
 <?php
-$slides = $_SESSION['slideshow'] ?? [];
+// Carregar catálogo completo de cursos
+$courses   = require __DIR__ . '/../data/courses.php';
+// Carregar apenas os IDs do slideshow
+$sliderIds = require __DIR__ . '/../data/slideshow.php';
+
+// Criar índice de cursos por ID
+$byId = [];
+foreach ($courses as $c) { $byId[$c['id']] = $c; }
+
+// Montar os slides na ordem dos IDs
+$slides = [];
+foreach ($sliderIds as $id) {
+  if (isset($byId[$id])) $slides[] = $byId[$id];
+}
+
 if (!$slides) { return; }
 ?>
 <section class="hero">
   <?php foreach ($slides as $i => $s): ?>
     <div
       class="hero__slide<?= $i === 0 ? ' is-active' : '' ?>"
-      style="background-image:url('./assets/images/hero/<?= htmlspecialchars($s['file']) ?>')"
+      style="background-image:url('./assets/images/hero/<?= htmlspecialchars($s['image']) ?>')"
     >
       <div class="hero__content">
         <div class="hero__title"><?= htmlspecialchars($s['title']) ?></div>
-        <p class="hero__text"><?= htmlspecialchars($s['text']) ?></p>
+        <p class="hero__text"><?= htmlspecialchars($s['description']) ?></p>
         <?php if (!empty($s['cta'])): ?>
           <div class="hero__actions">
             <a href="<?= htmlspecialchars($s['link'] ?? '#') ?>" class="btn">

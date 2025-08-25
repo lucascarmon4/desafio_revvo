@@ -1,6 +1,7 @@
 <section class="courses">
   <div class="container">
     <h2 class="courses__title">MEUS CURSOS</h2>
+    <hr>
     <div class="courses__grid">
       <article class="card">
         <div class="card__media">

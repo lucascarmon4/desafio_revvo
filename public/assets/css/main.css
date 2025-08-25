@@ -43,11 +43,6 @@ ol {
   margin: 0;
 }
 
-:focus {
-  outline: 2px solid #03a9f4;
-  outline-offset: 2px;
-}
-
 h1,
 h2,
 h3,
