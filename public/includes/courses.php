@@ -34,7 +34,7 @@ $userCourses = array_values(array_intersect_key($byId, array_flip($userCourseIds
               <p class="card__desc"><?= htmlspecialchars($course['description'] ?? '') ?></p>
             </div>
             <div class="card__footer">
-              <a href="<?= htmlspecialchars($course['link'] ?? '#') ?>" class="btn btn-success">
+              <a href="<?= htmlspecialchars($course['link'] ?? '#') ?>" class="btn btn__ver-curso">
                 <?= htmlspecialchars($course['cta'] ?? 'VER CURSO') ?>
               </a>
             </div>

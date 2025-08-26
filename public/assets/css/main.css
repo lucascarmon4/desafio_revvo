@@ -522,9 +522,16 @@ small,
   padding-top: 0;
 }
 
-.card__footer .btn-success {
-  width: 120px;
-  border-radius: 18px;
+.card__footer .btn__ver-curso {
+  background-color: #00b300;
+  width: 100%;
+  border-radius: 28px;
+  color: white;
+  transition: 0.2s ease;
+}
+.card__footer .btn__ver-curso:hover {
+  background-color: green;
+  color: white;
 }
 
 .footer {

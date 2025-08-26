@@ -85,7 +85,15 @@
     padding-top: 0;
 }
 
-.card__footer .btn-success {
-    width: 120px;
-    border-radius: 18px;
+.card__footer .btn__ver-curso {
+    background-color: lighten(green, 10%);
+    width: 100%;
+    border-radius: 28px;
+    color: white;
+    transition: 0.2s ease;
+
+    &:hover {
+        background-color: green;
+        color: white;
+    }
 }
