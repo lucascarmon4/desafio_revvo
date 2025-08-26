@@ -534,6 +534,56 @@ small,
   color: white;
 }
 
+.card__add-course {
+  border: 2px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #f9f9f9;
+  cursor: pointer;
+  transition: border-color 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+.card__add-course .card__add-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #666;
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+}
+.card__add-course .card__media {
+  margin-bottom: 0.8rem;
+}
+.card__add-course .card__media .card__plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #999;
+  line-height: 1;
+}
+.card__add-course .card__title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #666;
+  line-height: 1.4;
+}
+.card__add-course:hover {
+  border-color: #999;
+  background: #f1f1f1;
+}
+.card__add-course:hover .card__plus {
+  color: #333;
+}
+.card__add-course:hover .card__title {
+  color: #333;
+}
+
 .footer {
   background: #fafafa;
   border-top: 1px solid #dddddd;

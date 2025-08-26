@@ -40,6 +40,18 @@ $userCourses = array_values(array_intersect_key($byId, array_flip($userCourseIds
             </div>
           </article>
         <?php endforeach; ?>
+        <article class="card card__add-course">
+          <a href="/curso_add.php" class="card__add-link">
+            <div class="card__media">
+              <span class="card__plus">+</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">
+                ADICIONAR<br>CURSO
+              </h3>
+            </div>
+          </a>
+        </article>
       </div>
     <?php endif; ?>
   </div>
