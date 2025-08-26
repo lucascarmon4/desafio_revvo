@@ -523,7 +523,7 @@ small,
 }
 
 .card__footer .btn__ver-curso {
-  background-color: #00b300;
+  background-color: rgb(0, 175, 0);
   width: 100%;
   border-radius: 28px;
   color: white;
@@ -558,5 +558,78 @@ small,
   color: #888;
   font-size: 0.8rem;
   padding: 10px 0;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 9999;
+}
+.modal.is-open {
+  display: block;
+}
+.modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+.modal__dialog {
+  position: relative;
+  max-width: 800px;
+  border-radius: 30px;
+  margin: 10vh auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.25);
+}
+.modal__bg {
+  background-image: url("../images/modal-bg.png");
+  height: 250px;
+  opacity: 0.8;
+  background-position: center;
+  border-radius: 10px 10px 0 0;
+}
+.modal__content {
+  padding: 50px 90px;
+  text-align: center;
+}
+.modal__close {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  z-index: 9999;
+}
+.modal__close-icon {
+  font-size: 24px;
+  line-height: 1;
+  color: orangered;
+}
+.modal__body p {
+  color: #666666;
+}
+.modal__header h2 {
+  margin: 0 0 10px;
+}
+.modal__footer {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+.modal__footer .btn {
+  padding: 10px 70px;
+  border-radius: 40px;
 }
 /*# sourceMappingURL=main.css.map */
