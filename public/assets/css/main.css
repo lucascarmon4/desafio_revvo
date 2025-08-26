@@ -475,6 +475,25 @@ small,
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
+.card__badge {
+  position: absolute;
+  top: 38px;
+  right: -18px;
+  background: #faff00;
+  color: #5a5a5a;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 4px 8px;
+  transform: rotate(45deg);
+  transform-origin: top right;
+  width: 80px;
+  text-align: center;
+}
+
+.card__media {
+  position: relative;
+}
+
 .card__media img {
   width: 100%;
   aspect-ratio: 4/3;

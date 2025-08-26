@@ -20,7 +20,7 @@ if (!$slides) { return; }
   <?php foreach ($slides as $i => $s): ?>
     <div
       class="hero__slide<?= $i === 0 ? ' is-active' : '' ?>"
-      style="background-image:url('./assets/images/hero/<?= htmlspecialchars($s['image']) ?>')"
+      style="background-image:url('./assets/images/courses/<?= htmlspecialchars($s['image']) ?>')"
     >
       <div class="hero__content">
         <div class="hero__title"><?= htmlspecialchars($s['title']) ?></div>

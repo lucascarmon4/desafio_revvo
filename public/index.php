@@ -2,6 +2,12 @@
 $_SESSION = [];
 session_start();
 
+if (!isset($_SESSION['user_id'])) {
+  // header('Location: /login.php');
+  // exit;
+  $_SESSION['user_id'] = 1;
+}
+
 require __DIR__ . '/data/users.php';
 require __DIR__ . '/data/users_courses.php';
 require __DIR__ . '/data/courses.php';
