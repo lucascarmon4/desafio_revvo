@@ -37,7 +37,7 @@ require __DIR__ . '/data/courses.php';
 	</main>
 
 	<?php include 'includes/footer.php'; ?>
-	<?php if ($showModal) { include 'includes/modal.php'; } ?>
+	<?php if ($showModal) { include 'includes/modal-first.php'; } ?>
 
 	<script src="./assets/js/hero.js"></script>
 </body>
