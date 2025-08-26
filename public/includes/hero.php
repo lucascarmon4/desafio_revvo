@@ -1,19 +1,8 @@
 <?php
 // Carregar catálogo completo de cursos
-$courses   = $_SESSION['courses'];
-// Carregar apenas os IDs do slideshow
-$sliderIds = $_SESSION['slideshow'];
 
-// Criar índice de cursos por ID
-$byId = [];
-foreach ($courses as $c) { $byId[$c['id']] = $c; }
-
-// Montar os slides na ordem dos IDs
-$slides = [];
-foreach ($sliderIds as $id) {
-  if (isset($byId[$id])) $slides[] = $byId[$id];
-}
-
+$courses = $_SESSION['courses'];
+$slides = $courses;
 if (!$slides) { return; }
 ?>
 <section class="hero">

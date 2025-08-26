@@ -1,8 +1,5 @@
 <?php
-$userId = $_SESSION['user_id'];
-$userCourseIds = $_SESSION['user_courses'][$userId] ?? [];
-$userCourses = array_values(array_intersect_key($byId, array_flip($userCourseIds)));
-
+$courses = $_SESSION['courses'] ?? [];
 ?>
 
 <section class="courses">
@@ -10,11 +7,11 @@ $userCourses = array_values(array_intersect_key($byId, array_flip($userCourseIds
     <h2 class="courses__title">MEUS CURSOS</h2>
     <hr>
 
-    <?php if (empty($userCourses)): ?>
+    <?php if (empty($courses)): ?>
       <p class="courses__empty">Você ainda não possui cursos. <a href="/cursos.php">Ver catálogo completo</a>.</p>
     <?php else: ?>
       <div class="courses__grid">
-        <?php foreach ($userCourses as $course): ?>
+        <?php foreach ($courses as $course): ?>
           <article class="card">
             <div class="card__media" aria-label="Capa do curso">
               <?php if (!empty($course['image'])): ?>

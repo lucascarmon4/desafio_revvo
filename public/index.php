@@ -15,10 +15,7 @@ if (!isset($_SESSION['user_id'])) {
   $_SESSION['user_id'] = 1;
 }
 
-require __DIR__ . '/data/users.php';
-require __DIR__ . '/data/users_courses.php';
 require __DIR__ . '/data/courses.php';
-require __DIR__ . '/data/slideshow.php';
 
 ?>
 <!DOCTYPE html>
