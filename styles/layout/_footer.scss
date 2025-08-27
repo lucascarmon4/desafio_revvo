@@ -1,0 +1,27 @@
+@use "../base/tokens" as *;
+
+.footer {
+    background: #fafafa;
+    border-top: 1px solid #dddddd;
+    color: $color-muted;
+    margin-top: $space-8;
+}
+
+.footer__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: $space-6;
+    padding: $space-6 0;
+}
+
+.footer small {
+    display: block;
+    color: $color-muted;
+}
+
+.footer__copy {
+    background: #f0f0f0;
+    color: #888;
+    font-size: 0.8rem;
+    padding: 10px 0;
+}

@@ -1,0 +1,28 @@
+@use "../base/tokens" as *;
+
+@mixin bp($point) {
+    @if $point == desktop-lg {
+        @media (min-width: $bp-desktop-lg) {
+            @content;
+        }
+    } @else if $point == notebook {
+        @media (min-width: $bp-notebook) and (max-width: ($bp-desktop-lg - 1)) {
+            @content;
+        }
+    } @else if $point == tablet {
+        @media (min-width: $bp-tablet) and (max-width: ($bp-notebook - 1)) {
+            @content;
+        }
+    } @else if $point == mobile {
+        @media (max-width: ($bp-tablet - 1)) {
+            @content;
+        }
+    }
+}
+
+@mixin container($max: 1200px) {
+    width: 100%;
+    max-width: $max;
+    margin-inline: auto;
+    padding-inline: $space-4;
+}

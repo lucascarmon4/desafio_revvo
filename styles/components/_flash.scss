@@ -1,0 +1,20 @@
+.flash {
+    padding: 1rem;
+    margin: 1rem auto;
+    max-width: 800px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+
+    &--ok {
+        background: #e6ffed;
+        color: #0c6;
+        border: 1px solid #0c6;
+    }
+
+    &--error {
+        background: #ffe6e6;
+        color: #c00;
+        border: 1px solid #c00;
+    }
+}

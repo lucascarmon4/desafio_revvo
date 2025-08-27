@@ -1,0 +1,37 @@
+@use "../base/mixins" as *;
+@use "../base/tokens" as *;
+
+.container {
+    @include container(1200px);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: $space-4;
+}
+
+.col-12 {
+    grid-column: span 12;
+}
+.col-6 {
+    grid-column: span 6;
+}
+.col-4 {
+    grid-column: span 4;
+}
+.col-3 {
+    grid-column: span 3;
+}
+
+@include bp(mobile) {
+    .row {
+        grid-template-columns: 1fr;
+    }
+    .col-12,
+    .col-6,
+    .col-4,
+    .col-3 {
+        grid-column: span 1;
+    }
+}

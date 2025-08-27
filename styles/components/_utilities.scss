@@ -1,0 +1,46 @@
+@use "../base/tokens" as *;
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.skip-link:focus {
+    left: 8px;
+    top: 8px;
+    width: auto;
+    height: auto;
+    padding: $space-2 $space-3;
+    background: $color-primary;
+    color: $color-primary-contrast;
+    border-radius: $radius-sm;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(50%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.mt-4 {
+    margin-top: $space-4;
+}
+.mb-4 {
+    margin-bottom: $space-4;
+}
+.py-5 {
+    padding-block: $space-5;
+}
+.px-4 {
+    padding-inline: $space-4;
+}

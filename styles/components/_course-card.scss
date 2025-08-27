@@ -1,0 +1,166 @@
+@use "../base/tokens" as *;
+@use "../base/mixins" as *;
+
+.courses {
+    background: $color-bg;
+    padding: $space-6 0 $space-8;
+}
+
+.courses__title {
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    margin-bottom: $space-4;
+}
+
+.courses__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $space-5;
+
+    @include bp(tablet) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include bp(mobile) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    background: #fff;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s ease;
+    min-height: 390px;
+    &:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+}
+
+.card__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: $space-4;
+}
+
+.card__badge {
+    position: absolute;
+    top: 38px;
+    right: -18px;
+    background: #faff00;
+    color: #5a5a5a;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 4px 8px;
+    transform: rotate(45deg);
+    transform-origin: top right;
+    width: 80px;
+    text-align: center;
+}
+.card__media {
+    position: relative;
+}
+
+.card__media img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+.card__body {
+    padding: $space-4;
+}
+
+.card__title {
+    font-weight: 700;
+    margin-bottom: $space-2;
+    font-size: 1rem;
+}
+
+.card__desc {
+    color: $color-muted;
+    font-size: 0.875rem;
+    margin-bottom: $space-4;
+}
+
+.card__footer {
+    padding: $space-4;
+    padding-top: 0;
+}
+
+.card__footer .btn__ver-curso {
+    background-color: rgb(0, 175, 0);
+    width: 100%;
+    border-radius: 28px;
+    color: white;
+    transition: 0.2s ease;
+
+    &:hover {
+        background-color: green;
+        color: white;
+    }
+}
+
+.card__add-course {
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #f9f9f9;
+    cursor: pointer;
+    transition: border-color 0.2s ease-in-out, background 0.2s ease-in-out;
+
+    .card__add-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: #666;
+        padding: 2rem;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        outline: none;
+        border: none;
+    }
+
+    .card__media {
+        margin-bottom: 0.8rem;
+
+        .card__plus {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #999;
+            line-height: 1;
+        }
+    }
+
+    .card__title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #666;
+        line-height: 1.4;
+    }
+
+    &:hover {
+        border-color: #999;
+        background: #f1f1f1;
+
+        .card__plus {
+            color: #333;
+        }
+
+        .card__title {
+            color: #333;
+        }
+    }
+}
