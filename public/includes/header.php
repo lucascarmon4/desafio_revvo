@@ -1,6 +1,8 @@
 <?php
-$users = $_SESSION['users'];
-$currentUser = $users[1];
+$currentUser = [
+  "name" => "John Doe",
+  "photo" => "user.jpg"
+];
 ?>
 
 <header class="header">
@@ -16,7 +18,7 @@ $currentUser = $users[1];
       </div>
       <hr />
       <div class="header__user">
-        <img class="header__avatar" src="./assets/images/<?php echo $currentUser['photo']; ?>" alt="Usuário <?php echo $currentUser['name']; ?>">
+        <img class="header__avatar" src="./assets/images/<?php echo $currentUser['photo'] ?>" alt="Usuário <?php echo $currentUser['name']; ?>">
         <div class="header__user-info">
           <span>Seja bem-vindo</span>
           <strong><?php echo $currentUser['name']; ?></strong>

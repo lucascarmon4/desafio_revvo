@@ -27,12 +27,20 @@ require __DIR__ . '/data/courses.php';
 	<link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
+
+	
 	<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-
+	
 	<?php include 'includes/header.php'; ?>
-
+	
 	<main id="conteudo">
 		<?php include 'includes/hero.php'; ?>
+		<?php if (isset($_SESSION['flash'])): ?>
+			<div class="flash <?= $_SESSION['flash']['ok'] ? 'flash--ok' : 'flash--error' ?>">
+				  <?= htmlspecialchars($_SESSION['flash']['message']) ?>
+			</div>
+			<?php unset($_SESSION['flash']); ?>
+		  <?php endif; ?>
 		<?php include 'includes/courses.php'; ?>
 	</main>
 
